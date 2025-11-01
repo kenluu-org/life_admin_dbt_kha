@@ -1,45 +1,45 @@
 name: gtd dash v1.0
 description: ""
-updatedAt: "2025-11-01T12:18:57.889Z"
+updatedAt: "2025-09-24T22:55:30.837Z"
 tiles:
   - x: 0
     "y": 0
-    h: 7
-    w: 18
+    h: 3
+    w: 12
     tabUuid: null
     type: saved_chart
     properties:
       title: ""
       hideTitle: false
-      chartSlug: tasks-lookahead-1
-      chartName: tasks lookahead
-    tileSlug: tasks-lookahead-1
-  - x: 18
+      chartSlug: data-freshness
+      chartName: Data freshness
+    tileSlug: data-freshness
+  - x: 12
     "y": 0
-    h: 14
-    w: 18
+    h: 3
+    w: 12
     tabUuid: null
     type: saved_chart
     properties:
       title: ""
       hideTitle: false
-      chartSlug: tasks-drill-down-by-grain
-      chartName: drill down tasks by parent grain dimension
-    tileSlug: tasks-drill-down-by-grain
+      chartSlug: next-load-time
+      chartName: next load time
+    tileSlug: next-load-time
   - x: 0
-    "y": 7
+    "y": 3
     h: 7
-    w: 18
+    w: 36
     tabUuid: null
     type: saved_chart
     properties:
       title: ""
       hideTitle: false
-      chartSlug: distribution-by-parent-dimension
-      chartName: distribution by parent dimension
-    tileSlug: distribution-by-parent-dimension
+      chartSlug: tasks-lookahead
+      chartName: tasks lookahead
+    tileSlug: tasks-lookahead
   - x: 0
-    "y": 14
+    "y": 10
     h: 8
     w: 36
     tabUuid: null
@@ -52,47 +52,10 @@ tiles:
     tileSlug: what-did-you-do
 filters:
   metrics: []
-  dimensions:
-    - label: Lookahead Date day
-      target:
-        fieldId: dim_date_spine_date_day
-        fieldName: date_day
-        tableName: dim_date_spine
-      values:
-        - 5
-      disabled: false
-      operator: inTheNext
-      settings:
-        completed: false
-        unitOfTime: weeks
-      tileTargets:
-        tasks-lookahead-1:
-          fieldId: dim_date_spine_date_day
-          tableName: dim_date_spine
-        what-did-you-do: false
-    - target:
-        fieldId: fct_tasks_status
-        fieldName: status
-        tableName: fct_tasks
-      values:
-        - "2"
-      disabled: false
-      operator: notEquals
-      tileTargets:
-        distribution-by-parent-dimension:
-          fieldId: fct_tasks_status
-          tableName: fct_tasks
-        tasks-drill-down-by-grain:
-          fieldId: fct_tasks_status
-          tableName: fct_tasks
-        what-did-you-do: false
-        tasks-lookahead-1:
-          fieldId: fct_tasks_status
-          tableName: fct_tasks
-        what-did-you-do: false
+  dimensions: []
   tableCalculations: []
 tabs: []
 slug: gtd-dash-v1-0
 spaceSlug: shared
 version: 1
-downloadedAt: "2025-11-01T14:54:31.019Z"
+downloadedAt: "2025-11-01T15:27:20.539Z"
